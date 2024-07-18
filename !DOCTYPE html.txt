@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Rounded Corners and Aspect Ratio</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625 = 56.25%) */
+            overflow: hidden;
+            border-radius: 20px; /* Adjust the corner radius as needed */
+        }
+        .container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: auto;
+            transform: translate(-50%, -50%);
+            border-radius: 20px; /* Ensure the image itself has rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://example.com/your-image.jpg" alt="Cover Image">
+    </div>
+</body>
+</html>
